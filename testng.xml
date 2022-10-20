@@ -1,0 +1,11 @@
+<suite name="Suite1" verbose="1">
+    <listeners>
+        <listener class-name="com.demo.listeners.ListenerClass"/>
+    </listeners>
+    <test thread-count="1" name="Regression1" parallel="methods">
+        <classes>
+            <class name="com.demo.test.AmazonPageTest"/>
+            <!--         <class name="com.demo.listeners.Runner"/> -->
+        </classes>
+    </test>
+</suite>
