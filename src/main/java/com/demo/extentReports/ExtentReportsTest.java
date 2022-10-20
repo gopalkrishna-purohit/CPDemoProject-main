@@ -15,7 +15,6 @@ public final class ExtentReportsTest {
     private ExtentReportsTest() {
     }
 
-
     private static ExtentReports extent;
 
     public static ExtentTest test;
@@ -28,7 +27,6 @@ public final class ExtentReportsTest {
             spark.config().setTheme(Theme.DARK);
             spark.config().setDocumentTitle("Automation Report");
             spark.config().setReportName("Demo Project");
-
         }
     }
 
@@ -36,13 +34,9 @@ public final class ExtentReportsTest {
         if (Objects.nonNull(extent)) {
             extent.flush();
         }
-//        Desktop.getDesktop().browse(new File("index.html").toURI());
     }
 
     public static void createTest(String testName) {
         test = extent.createTest(testName);
-
-
     }
-
 }

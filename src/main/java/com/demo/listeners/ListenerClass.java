@@ -1,6 +1,4 @@
 package com.demo.listeners;
-
-import com.demo.driver.Driver;
 import com.demo.extentReports.ExtentLogger;
 import com.demo.extentReports.ExtentReportsTest;
 import org.testng.ISuiteListener;
@@ -12,20 +10,14 @@ import java.io.IOException;
 
 public class ListenerClass implements ITestListener, ISuiteListener {
 
-
-
-
     @Override
     public void onTestStart(ITestResult result) {
-//        Driver.initDriver();
         ExtentReportsTest.createTest(result.getMethod().getMethodName());
-
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
         ExtentLogger.pass(result.getMethod().getMethodName()+" is passed");
-
     }
 
     @Override

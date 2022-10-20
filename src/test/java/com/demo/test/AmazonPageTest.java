@@ -1,5 +1,4 @@
 package com.demo.test;
-
 import com.demo.driver.DriverManager;
 import com.demo.enums.PropertiesUtils;
 import com.demo.pages.AmazonPage;
@@ -11,12 +10,8 @@ public  class AmazonPageTest extends BaseTest {
     private AmazonPageTest() {
     }
 
-//
-
     @Test
     public void SearchGoogleText()  {
-
-
         DriverManager.getDriver().get(PropertyFile.getValue(PropertiesUtils.URL));
         AmazonPage page = new AmazonPage();
         page.clickOnHamburgerMenu();
